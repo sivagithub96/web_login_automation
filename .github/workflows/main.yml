@@ -1,19 +1,19 @@
-name:Docker Image Ci
+name: Docker Image Ci
 on:
  push:
-  branch:[master]
+  branch: [master]
  pull request:
-  branches:[master]
+  branches: [master]
  jobs:
 push_to_registries:
- name:push Docker image to multiple registries 
- runs-on:ubuntu-latest
+ name: push Docker image to multiple registries 
+ runs-on: ubuntu-latest
  steps:
-  -name:check out the repo 
-   uses:actions/checkout@v2
-  -name:Build and publish head Docker image
-   uses:Vaultvulp/gp-docker-action@1.1.7
+  -name: check out the repo 
+   uses: actions/checkout@v2
+  -name: Build and publish head Docker image
+   uses: Vaultvulp/gp-docker-action@1.1.7
    with:
-    github-token:${{secrets.TOKEN}}#provide GITHUB_TOKEN to login into the Github packages
-    images-name:myjavaapp#provide Docker image name
-    image-tag:v1#provide Docker image tag
+    github-token: ${{secrets.TOKEN}}#provide GITHUB_TOKEN to login into the Github packages
+    images-name: myjavaapp#provide Docker image name
+    image-tag: v1 #provide Docker image tag
