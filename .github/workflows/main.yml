@@ -6,7 +6,7 @@ on:
     branches: [master]
 jobs:
   push_to_registries:
-    name: Docker push image to multiple registries 
+    name: Docker push multiple registries 
     runs-on: ubuntu-latest
     steps:
     - name: check out the repo 
